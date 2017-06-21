@@ -1,0 +1,9 @@
+mq() {
+  if [[ ${argv} == "-c" ]]; then
+    mailq | grep "^[^[:space:]]" | grep -v "^-" | grep -v "^(" | grep -v "Mail queue is empty" | wc -l
+  elif [[ ${argv} == "" ]]; then
+    mailq | grep "^[^[:space:]]" | grep -v "^-" | grep -v "^(" 
+  else
+    mailq | grep "^[^[:space:]]" | grep -v "^-" | grep -v "^(" | grep -v "Mail queue is empty" | grep ${argv}
+  fi
+}

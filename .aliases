@@ -1,0 +1,80 @@
+#command aliases
+alias -g G '|grep'
+alias grep='grep --color'
+alias vi=vim
+alias m=$PAGER
+alias so=source
+alias h='history | egrep '
+alias gp='getent passwd '
+if [[ $GNU != "false" ]];then
+  alias ls='ls -Fh --color=auto'
+else 
+  alias ls='ls -Fh'
+fi
+if [ `uname` = "Darwin" ];then
+  alias ls='ls -FhG'
+fi
+alias ll='ls -l'
+alias lL='ls -la'
+alias sl='ls'
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias screenls="/usr/bin/screen -ls"
+alias screen="screen -d -R"
+alias difff="git difftool -t opendiff"
+alias scpresume="rsync --partial --progress --rsh=ssh"
+alias gr="git push origin HEAD:refs/for/master"
+alias git-topcontribs="git log | grep Author | sed 's/Author: .* <\(.*\)>/\1/' | sort | uniq -c | sort -r"
+
+#acctserv aliases
+alias allticks="rt ls \"Owner='Nobody' and Status='new' and Queue='General'\""
+alias myticks="rt ls \"Owner='$USER'\""
+
+alias gp="getent passwd"
+alias ag="sudo apache2ctl graceful"
+alias mqc="mq -c \"*\""
+alias mqt="mailq | tail"
+alias mypubkey="cat ~/.ssh/id_rsa.pub"
+alias au="sudo apt-get update"
+alias ad="sudo apt-get dist-upgrade"
+
+#ssh
+alias hcs='ssh vsant@hcs.harvard.edu'
+alias cumc='ssh vrs2117@cunix.columbia.edu'
+
+# HCS ssh
+alias hcs-mail-backup='ssh hcs@hcs-backup.seas.harvard.edu'
+alias romulus='ssh hcs@romulus.hcs.harvard.edu'
+alias remus='ssh hcs@remus.hcs.harvard.edu'
+alias hersilia='ssh hcs@hersilia.hcs.harvard.edu'
+alias virgil='ssh hcs@virgil.hcs.harvard.edu'
+alias package='ssh package@config.hcs.harvard.edu'
+alias config.hcs='ssh hcs@cfg1.hcs.harvard.edu'
+alias augustus='ssh $USER@augustus.hcs.harvard.edu'
+alias flavius='ssh $USER@flavius.hcs.harvard.edu'
+alias trajan='ssh hcs@trajan.hcs.harvard.edu'
+alias trajan-list='ssh list@trajan.hcs.harvard.edu'
+alias cicero='ssh $USER@cicero.hcs.harvard.edu'
+alias marcus='ssh $USER@marcus.hcs.harvard.edu'
+alias cato='ssh $USER@cato.hcs.harvard.edu'
+alias caesar='ssh $USER@caesar.hcs.harvard.edu'
+alias gracchus='ssh hcs@gracchus.hcs.harvard.edu'
+alias petreius='ssh hcs@petreius.hcs.harvard.edu'
+alias titus='ssh hcs@titus.hcs.harvard.edu'
+alias nero='ssh hcs@nero.hcs.harvard.edu'
+alias sertorius='ssh hcs@sertorius.hcs.harvard.edu'
+alias scipio='ssh hcs@scipio.hcs.harvard.edu'
+alias dellius='ssh hcs@dellius.hcs.harvard.edu'
+
+# Personal ssh
+alias dharma='ssh dharma@hcs.harvard.edu'
+alias vsant-laptop='ssh vsant@vsant-laptop.dyndns.org'
+alias vsant-air='ssh vsant@vsant-air.dyndns.org'
+alias home='ssh home@Sant-iMac.local'
+alias home-old='ssh home@Old-iMac.local'
+alias r2d2='ssh vsant@viveksant.org'
+
+# Random cool aliases
+alias rot13='tr "[a-m][n-z][A-M][N-Z]" "[n-z][a-m][N-Z][A-M]"'
+alias rmwhitespace="awk '{gsub(/^[ \t]+|[ \t]+$/,\"\")};1'"

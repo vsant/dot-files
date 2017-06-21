@@ -1,0 +1,23 @@
+if [[ $ISTYPE == "" ]]; then
+  ISTYPE=$HOST
+fi
+ 
+case $ISTYPE in
+  hcs|login0|cicero|marcus|caesar|cato)
+	  thismachine=${fg_bold[green]}
+		;;
+	Viveks-MacBook.local|vader|r2d2)
+	  thismachine=${fg_bold[magenta]}
+		;;
+	fas|ice*|ws|ls0*)
+	  thismachine=${fg_bold[blue]}
+		;;
+  augustus|flavius)
+	  thismachine=${fg_bold[cyan]}
+		;;
+	sundev*|walleye|bass)
+	  thismachine=${fg_bold[red]}
+		;;
+	*)
+	  thismachine=${fg_bold[yellow]}
+esac
