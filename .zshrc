@@ -32,6 +32,7 @@ alias dh='dirs -v'
 HISTFILE=$HOME/.zhistory
 HISTSIZE=5000
 SAVEHIST=5000
+setopt HIST_IGNORE_SPACE
 if [ `uname` = "SunOS" ];then
   HOSTNAME=$HOST
 else
