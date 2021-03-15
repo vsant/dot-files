@@ -87,7 +87,7 @@ fi
 shellsync(){
   base="www.hcs.harvard.edu/~vsant/vivek"
   mkdir -p ~/.functions
-  for f in .zshrc .zshenv .colors .vimrc .aliases .functions/shcs .functions/mq .functions/_subversion; do
+  for f in .zshrc .zshenv .colors .vimrc .aliases .functions/mq; do
     wget $base$f -q -O ~/$f
   done
   source ~/.zshrc
