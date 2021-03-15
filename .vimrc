@@ -24,8 +24,8 @@ if version >= 600
 endif
 " Only do this for Vim version 5.0 and later.
 
-"no wrap and number lines
-set nowrap
+" Set wrap (vs nowrap) and number lines
+set wrap
 set nu
 " Set C indenting options
 set shiftwidth=2

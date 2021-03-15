@@ -1,9 +1,0 @@
-shcs () {
-  if   [[ $1 == "-b" ]];then
-    ssh bootstrap@$2.hcs.harvard.edu
-  elif [[ $1 == "-h" ]];then
-    ssh hcs@$2.hcs.harvard.edu
-  else
-    ssh $USER@$1.hcs.harvard.edu
-  fi
-}
