@@ -35,9 +35,9 @@ alias mypubkey="cat ~/.ssh/id_rsa.pub"
 # Personal ssh
 alias hcs='ssh vsant@hcs.harvard.edu'
 alias home='ssh home@Sant-Mac.local'
-alias r2d2='ssh vsant@viveksant.org'
-alias patel='ssh patel@viveksant.org'
-alias cnx='ssh cnxmedical@viveksant.org'
+alias r2d2='ssh vsant@viveksant.com'
+alias patel='ssh patel@viveksant.com'
+alias cnx='ssh cnxmedical@viveksant.com'
 
 # Random cool aliases
 alias rot13='tr "[a-m][n-z][A-M][N-Z]" "[n-z][a-m][N-Z][A-M]"'
