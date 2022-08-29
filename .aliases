@@ -3,7 +3,6 @@ alias -g G '|grep'
 alias grep='grep --color'
 alias vi=vim
 alias m=$PAGER
-alias so=source
 alias h='history | egrep '
 alias gp='getent passwd '
 if [[ $GNU != "false" ]];then
@@ -36,7 +35,6 @@ alias mypubkey="cat ~/.ssh/id_rsa.pub"
 alias hcs='ssh vsant@hcs.harvard.edu'
 alias home='ssh home@Sant-Mac.local'
 alias r2d2='ssh vsant@viveksant.com'
-alias patel='ssh patel@viveksant.com'
 alias cnx='ssh cnxmedical@viveksant.com'
 
 # Random cool aliases

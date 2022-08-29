@@ -85,7 +85,7 @@ if [ -s $HOME/.aliases ]; then
 fi
 
 shellsync(){
-  base="www.hcs.harvard.edu/~vsant/vivek"
+  base="https://raw.githubusercontent.com/vsant/dot-files/master/"
   mkdir -p ~/.functions
   for f in .zshrc .zshenv .colors .vimrc .aliases .functions/mq; do
     wget $base$f -q -O ~/$f

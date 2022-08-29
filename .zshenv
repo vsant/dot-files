@@ -10,7 +10,7 @@ fi
 # When on my MacBook
 if [ `uname` = "Darwin" ];then
   PATH=/usr/local/bin:${PATH}
-  if [ `uname -n` = "Viveks-Air.local" ];then
+  if [ `uname -n | cut -d'.' -f1` = "Viveks-Air" ];then
     ISTYPE='c3po'
   fi
   export PYTHONPATH="$HOME/.python-local-modules:$HOME/Library/Python/2.7/site-packages"
