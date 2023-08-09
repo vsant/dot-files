@@ -13,7 +13,7 @@ if [ `uname` = "Darwin" ];then
   if [ `uname -n | cut -d'.' -f1` = "Viveks-Air" ];then
     ISTYPE='c3po'
   fi
-  export PYTHONPATH="$HOME/.python-local-modules:$HOME/Library/Python/2.7/site-packages"
+  export PYTHONPATH="$HOME/.python-local-modules:$HOME/Library/Python/3.9/lib/python/site-packages:$HOME/Library/Python/3.9/bin"
 else
   export PYTHONPATH=$HOME/.python-local-modules
 fi
