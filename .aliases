@@ -32,11 +32,11 @@ alias mqt="mailq | tail"
 alias mypubkey="cat ~/.ssh/id_rsa.pub"
 
 # Personal ssh
-alias hcs='ssh vsant@hcs.harvard.edu'
 alias home='ssh home@Sant-Mac.local'
 alias router='ssh admin@192.168.50.1'
 alias r2d2='ssh vsant@viveksant.com'
 alias cnx='ssh cnxmedical@viveksant.com'
+alias nucleus='ssh s225952@nucleus.biohpc.swmed.edu'
 
 # Random cool aliases
 alias rot13='tr "[a-m][n-z][A-M][N-Z]" "[n-z][a-m][N-Z][A-M]"'
