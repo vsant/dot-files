@@ -21,3 +21,19 @@ fi
 PATH=$HOME/bin:$PATH:.
 
 export PYTHONSTARTUP=$HOME/.pythonrc.py
+
+# When on BioHPC
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/cm/shared/apps/python/3.12.x-mamba/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/cm/shared/apps/python/3.12.x-mamba/etc/profile.d/conda.sh" ]; then
+        . "/cm/shared/apps/python/3.12.x-mamba/etc/profile.d/conda.sh"
+    else
+        export PATH="/cm/shared/apps/python/3.12.x-mamba/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
