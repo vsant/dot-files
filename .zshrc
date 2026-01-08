@@ -23,7 +23,7 @@ zmodload -a zsh/zpty zpty
 zmodload -a zsh/zprof zprof
 zmodload -ap zsh/mapfile mapfile
 #use shell built-ins for file tasks (prevents limits on arguments, etc.)
-if [[ IS_RHEL_LIKE = 0 ]]; then
+if (( IS_RHEL_LIKE == 0 )); then
   zmodload -i zsh/files
 fi
 
@@ -86,7 +86,7 @@ shellsync(){
 umask u=rwx,g=x,o=x
 
 autoload -Uz compinit
-if [[ IS_RHEL_LIKE = 0 ]]; then
+if (( IS_RHEL_LIKE == 0 )); then
   compinit
 fi
 bindkey "^?" backward-delete-char
@@ -146,7 +146,7 @@ zstyle ':completion:*:processes-names' command 'ps axho command'
 # 1. All /etc/hosts hostnames are in autocomplete
 # 2. If you have a comment in /etc/hosts like #%foobar.domain,
 #    then foobar.domain will show up in autocomplete!
-if [[ IS_RHEL_LIKE = 0 ]]; then
+if (( IS_RHEL_LIKE == 0 )); then
   zstyle ':completion:*' hosts $(awk '/^[^#]/ {print $2 $3" "$4" "$5}' /etc/hosts | grep -v ip6- && grep "^#%" /etc/hosts | awk -F% '{print $2}')
 fi
 local _myhosts

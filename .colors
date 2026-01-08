@@ -3,13 +3,13 @@ if [[ $ISTYPE == "" ]]; then
 fi
  
 case $ISTYPE in
-  hcs|login0|cicero|marcus|caesar|cato)
+  Nucleus*)
 	  thismachine=${fg_bold[green]}
 		;;
-	Viveks-MacBook.local|vader|r2d2)
+	vader|r2d2)
 	  thismachine=${fg_bold[magenta]}
 		;;
-	fas|ice*|ws|ls0*)
+	fas*)
 	  thismachine=${fg_bold[blue]}
 		;;
   augustus|flavius)
