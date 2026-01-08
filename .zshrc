@@ -33,25 +33,15 @@ HISTFILE=$HOME/.zhistory
 HISTSIZE=5000
 SAVEHIST=5000
 setopt HIST_IGNORE_SPACE
-if [ `uname` = "SunOS" ];then
-  HOSTNAME=$HOST
-else
-  HOSTNAME="`hostname -s`"
-fi
 PAGER='less'
 EDITOR='vim'
-
-# maintain compatibility with fas files
-if [[ $ISTYPE == "" ]]; then
-  ISTYPE=`hostname -s`
-fi
 
 autoload colors zsh/terminfo
 if [[ "$terminfo[colors]" -ge 8 || "$termcap[colors]" -ge 80 ]]; then
 	colors
 	source $HOME/.colors
 	PS1="%{$thismachine%}%(#.%{${bg_no_bold[black]}${fg_no_bold[yellow]}%}.)%(?..%{${bg_no_bold[black]}${fg_no_bold[red]}%})%n@$ISTYPE:%~%{${bg_no_bold[default]}${fg_no_bold[default]}%} "
-  if [ `uname -n` = 'r2d2' ];then
+  if [ $HOST = 'r2d2' ];then
     PS1="%{$thismachine%}%(#.%{${bg_no_bold[black]}${fg_no_bold[magenta]}%}.)%(?..%{${bg_no_bold[black]}${fg_no_bold[red]}%})%n@$ISTYPE:%~%{${bg_no_bold[default]}${fg_no_bold[default]}%} "
   fi
   #RPROMPT='[%*]'

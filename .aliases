@@ -10,7 +10,7 @@ if [[ $GNU != "false" ]];then
 else 
   alias ls='ls -Fh'
 fi
-if [ `uname` = "Darwin" ];then
+if [[ $OSTYPE = darwin* ]];then
   alias ls='ls -FhG'
 fi
 alias ll='ls -l'
