@@ -1,7 +1,5 @@
 [ -z "$PS1" ] && return
 
-GNU="true"
-
 # When on my MacBook
 if [[ $OSTYPE = darwin* ]];then
   PATH=/usr/local/bin:/opt/homebrew/bin:$HOME/Library/Python/3.9/bin:${PATH}
@@ -14,18 +12,11 @@ PATH=$HOME/bin:$PATH:.
 
 export PYTHONSTARTUP=$HOME/.pythonrc.py
 
-# When on BioHPC
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$('/cm/shared/apps/python/3.12.x-mamba/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-#if [ $? -eq 0 ]; then
-#    eval "$__conda_setup"
-#else
-#    if [ -f "/cm/shared/apps/python/3.12.x-mamba/etc/profile.d/conda.sh" ]; then
-#        . "/cm/shared/apps/python/3.12.x-mamba/etc/profile.d/conda.sh"
-#    else
-#        export PATH="/cm/shared/apps/python/3.12.x-mamba/bin:$PATH"
-#    fi
-#fi
-#unset __conda_setup
-# <<< conda initialize <<<
+# Create variable IS_RHEL_LIKE (1 if on RHEL where zsh 5.9 is hanging on command exec, 0 else)
+# Source os-release in a subshell so ID etc don't leak
+typeset -g IS_RHEL_LIKE=0
+if ( . /etc/os-release 2>/dev/null
+     [[ ${ID:-} == rhel ]]
+   ); then
+  IS_RHEL_LIKE=1
+fi

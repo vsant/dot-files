@@ -43,5 +43,5 @@ alias rot13='tr "[a-m][n-z][A-M][N-Z]" "[n-z][a-m][N-Z][A-M]"'
 alias rmwhitespace="awk '{gsub(/^[ \t]+|[ \t]+$/,\"\")};1'"
 
 # BioHPC aliases
-alias ca='conda activate data-project'
+alias ca='conda activate phpt'
 alias jn='jupyter notebook'
