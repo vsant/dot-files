@@ -25,6 +25,7 @@ zmodload -ap zsh/mapfile mapfile
 #use shell built-ins for file tasks (prevents limits on arguments, etc.)
 if (( IS_RHEL_LIKE == 0 )); then
   zmodload -i zsh/files
+  ISTYPE=`hostname -s`
 fi
 
 #directory stack coolness
