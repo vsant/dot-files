@@ -1,8 +1,6 @@
 # Command aliases
-alias -g G '|grep'
 alias grep='grep --color'
 alias vi=vim
-alias m=$PAGER
 alias h='history | egrep '
 alias gp='getent passwd '
 if [[ $GNU != "false" ]];then
