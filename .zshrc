@@ -43,11 +43,7 @@ EDITOR='vim'
 
 # maintain compatibility with fas files
 if [[ $ISTYPE == "" ]]; then
-  if [ `uname` = "SunOS" ];then
-    ISTYPE=$HOST
-  else
-    ISTYPE=`hostname -s`
-  fi
+  ISTYPE=`hostname -s`
 fi
 
 autoload colors zsh/terminfo
