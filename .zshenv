@@ -1,9 +1,9 @@
 [ -z "$PS1" ] && return
 
-# When on my MacBook
+# When on my MacBook; can add /Library/Frameworks/Python.framework/Versions/3.14/bin but already symlinked in /usr/local/bin
 if [[ $OSTYPE = darwin* ]];then
-  PATH=/usr/local/bin:/opt/homebrew/bin:$HOME/Library/Python/3.9/bin:${PATH}
-  export PYTHONPATH="$HOME/.python-local-modules:$HOME/Library/Python/3.9/lib/python/site-packages"
+  PATH=/usr/local/bin:/opt/homebrew/bin:${PATH}
+  export PYTHONPATH="$HOME/.python-local-modules:/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages"
 else
   export PYTHONPATH=$HOME/.python-local-modules
 fi
