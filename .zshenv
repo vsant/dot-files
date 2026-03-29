@@ -2,7 +2,7 @@
 
 # When on my MacBook; can add /Library/Frameworks/Python.framework/Versions/3.14/bin but already symlinked in /usr/local/bin
 if [[ $OSTYPE = darwin* ]];then
-  PATH=/usr/local/bin:/opt/homebrew/bin:${PATH}
+  PATH=/usr/local/bin:/opt/homebrew/bin:$HOME/.local/bin:${PATH}
   export PYTHONPATH="$HOME/.python-local-modules:/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages"
 else
   export PYTHONPATH=$HOME/.python-local-modules
