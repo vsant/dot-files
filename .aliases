@@ -33,7 +33,7 @@ alias mypubkey="cat ~/.ssh/id_rsa.pub"
 alias home='ssh home@Sant-Mac.local'
 alias router='ssh admin@192.168.50.1'
 alias r2d2='ssh vsant@viveksant.com'
-alias endosurgcalc='ssh endosurgcalc@endosurgcalc.org'
+alias endosurgcalc='ssh endosurgcalc@viveksant.com'
 alias nucleus='ssh s225952@nucleus.biohpc.swmed.edu'
 
 # Random cool aliases
